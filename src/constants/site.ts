@@ -7,7 +7,7 @@ export const SITE = {
   email: 'ishaanabhinav@gmail.com',
   url: import.meta.env.VITE_SITE_URL ?? 'https://ishaanabhinav.com',
   description:
-    'Engineer at Gojek (GoTo) building adtech systems — bidding, telemetry, search ads. Previously a year on risk & fraud.',
-  ogImage: '/og-image.png',
+    'Engineer at Gojek (GoTo) building adtech systems — bidding, telemetry, search ads — with a background in real-time risk & fraud detection.',
+  ogImage: '/hero-portrait.jpg',
   resumeUrl: '/resume.pdf',
 } as const;

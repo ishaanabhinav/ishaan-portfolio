@@ -1,1 +1,28 @@
-npx lint-staged
+#!/usr/bin/env sh
+
+# Run lint + format on staged files first
+npx lint-staged || exit 1
+
+# Sensitive-content guard — blocks commits that introduce risky patterns.
+# Only checks the staged diff (lines being ADDED), not existing history.
+# Edit FORBIDDEN_PATTERNS to extend.
+STAGED_DIFF=$(git diff --cached --diff-filter=ACMR -U0 -- ':!package-lock.json' ':!*.svg' ':!*.lock' | grep '^+' | grep -v '^+++ ')
+
+if [ -z "$STAGED_DIFF" ]; then
+  exit 0
+fi
+
+# Patterns to flag in newly-added lines.
+# - $51M / $1.2B style monetary figures
+# - common secret-ish env values committed by accident
+FORBIDDEN_PATTERNS='(\$[0-9]+(\.[0-9]+)?[MmKkBb][^A-Za-z]|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|xox[abp]-[A-Za-z0-9-]+)'
+
+HITS=$(printf '%s\n' "$STAGED_DIFF" | grep -nE "$FORBIDDEN_PATTERNS" || true)
+
+if [ -n "$HITS" ]; then
+  printf '\n\033[1;31m✖ pre-commit guard: blocked.\033[0m\n'
+  printf 'The staged diff contains content that looks like a monetary figure or a secret.\n'
+  printf 'Review the lines below, then either remove the content or — if you are certain it is safe — bypass with \033[1;33m--no-verify\033[0m.\n\n'
+  printf '%s\n\n' "$HITS"
+  exit 1
+fi

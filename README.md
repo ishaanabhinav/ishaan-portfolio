@@ -6,6 +6,8 @@ Premium, production-grade developer portfolio for **Ishaan Abhinav** — Lead So
 
 🌐 **Live:** [ishaanabhinav.com](https://ishaanabhinav.com)
 
+> **Note on reuse:** This is a personal portfolio. The source code, component patterns, and project structure are MIT-licensed and offered as a reference — feel free to learn from them. The site's copy, imagery, and personal data are not licensed for reuse. Please don't clone-and-rename.
+
 ---
 
 ## ✨ Highlights
