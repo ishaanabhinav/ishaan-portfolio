@@ -186,7 +186,7 @@ const STATS = [
   { value: '7+ yrs', label: 'shipping software', sub: 'startup → scale-up' },
   { value: '7K RPS', label: 'peak throughput', sub: 'real-time ads platform' },
   { value: '5+', label: 'production languages', sub: 'Go · Elixir · Java · Python · TS' },
-  { value: '3', label: 'core specialties', sub: 'backend · ML · full-stack' },
+  { value: '2', label: 'core specialties', sub: 'backend · full-stack' },
 ];
 
 const HeroStats = () => (
