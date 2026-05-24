@@ -1,0 +1,14 @@
+:root {
+  --bg-base: radial-gradient(at 0% 0%, rgba(255, 178, 77, 0.16) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(251, 53, 99, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 178, 77, 0.1) 0px, transparent 50%);
+
+  --header-height: 64px;
+  --section-spacing-y: clamp(4rem, 8vw, 7rem);
+}
+
+html.dark {
+  --bg-base: radial-gradient(at 0% 0%, rgba(249, 115, 11, 0.12) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(232, 23, 76, 0.1) 0px, transparent 55%),
+    radial-gradient(at 50% 100%, rgba(255, 145, 36, 0.08) 0px, transparent 60%);
+}

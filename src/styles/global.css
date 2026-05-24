@@ -1,0 +1,105 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    background-image: var(--bg-base);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background-color: theme('colors.brand.400 / 35%');
+    color: theme('colors.ink.950');
+  }
+
+  html.dark ::selection {
+    background-color: theme('colors.accent.500 / 35%');
+    color: theme('colors.ink.50');
+  }
+
+  /* Honor reduced motion preference globally */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.500');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/40 bg-white/60 backdrop-blur-xl;
+    @apply dark:border-white/10 dark:bg-white/[0.04];
+  }
+
+  .glass-strong {
+    @apply border border-white/50 bg-white/75 backdrop-blur-2xl;
+    @apply dark:border-white/10 dark:bg-white/[0.06];
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-x 8s ease infinite;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(15, 15, 16, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 15, 16, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .dark .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0d10" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fff8eb" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>Ishaan Abhinav · Lead Software Engineer</title>
+    <meta
+      name="description"
+      content="Ishaan Abhinav — Lead Software Engineer building large-scale ad-tech, real-time bidding systems, and full-stack platforms. Currently at Gojek (GoTo)."
+    />
+    <meta name="author" content="Ishaan Abhinav" />
+    <link rel="canonical" href="https://ishaanabhinav.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ishaanabhinav.com" />
+    <meta property="og:title" content="Ishaan Abhinav · Lead Software Engineer" />
+    <meta
+      property="og:description"
+      content="Lead Software Engineer at Gojek. Real-time bidding, distributed systems, and product engineering."
+    />
+    <meta property="og:image" content="https://ishaanabhinav.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ishaan Abhinav · Lead Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Lead Software Engineer at Gojek. Real-time bidding, distributed systems, and product engineering."
+    />
+    <meta name="twitter:image" content="https://ishaanabhinav.com/og-image.png" />
+
+    <!-- Preconnect to font CDN -->
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+    <!-- Prevent FOUC: apply persisted theme before React mounts -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-50">
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: system-ui">
+        This portfolio requires JavaScript. Please enable it to view the site.
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
