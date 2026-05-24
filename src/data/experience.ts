@@ -8,7 +8,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     startDate: 'Sep 2022',
     endDate: 'Present',
     summary:
-      'Specialising in ad-tech across both supply and demand sides — designing bidding systems, search-ads relevance, and high-throughput telemetry for the Gojek ads platform.',
+      'Currently on the Ads platform — designing bidding systems, search-ads relevance, and high-throughput telemetry. Earlier on the Risk & Fraud team, building real-time fraud detection for the Gojek + Tokopedia ecosystem.',
     highlights: [
       'Designed and shipped a real-time bidding (RTB) system serving ~7K requests/sec at peak, migrating from static CPC/CPM to dynamic auctions.',
       'Led architectural redesign of an 8-microservice ads platform; framework now supports flexible pricing models and new ad innovations.',
@@ -16,8 +16,10 @@ export const EXPERIENCE: ExperienceItem[] = [
       'Launched Keyword Selection for self-serve & enterprise merchants, driving a low single-digit % monthly lift in booked revenue.',
       'Built a parallel MQTT telemetry pipeline that recovered a low single-digit % of revenue previously lost to dropped impressions and improved org-wide event-capture reliability.',
       'Replaced scheduler-based impression counting with HyperLogLog, cutting system load by ~40 percentage points and modestly lifting ads revenue from improved counting accuracy.',
+      'Earlier on Risk & Fraud (Sep 2022 – Oct 2023): designed real-time risk-scoring and anomaly-detection systems covering merchant risk, scam detection, account takeovers, and payment validation across Gojek + Tokopedia.',
+      'Partnered with data science on predictive ML models for proactive fraud detection — reducing financial losses and strengthening platform security.',
     ],
-    stack: ['Go', 'Elixir', 'Kafka', 'Redis', 'gRPC', 'MQTT', 'PostgreSQL', 'BigQuery'],
+    stack: ['Go', 'Elixir', 'Kafka', 'Redis', 'gRPC', 'MQTT', 'PostgreSQL', 'BigQuery', 'Python', 'ML'],
     link: 'https://www.gojek.com',
   },
   {
@@ -29,17 +31,15 @@ export const EXPERIENCE: ExperienceItem[] = [
     summary:
       'Owned core platform engineering across web, mobile, and ML — from low-latency APIs to a complete stack migration that modernised the product.',
     highlights: [
-      'Built an ML profile deduplicator (FastText + scikit-learn) that cut manual recruiter work from hours to ~20 seconds.',
-      'Developed low-latency Java + Spring Boot APIs powering the company’s web and mobile applications.',
-      'Led a React Native + Redux hybrid app that drove a meaningful lift in user engagement and resume processing.',
       'Drove a full platform revamp from Struts/JSP → Next.js + Spring Boot with Redux & Tailwind, modernising UX and dev velocity.',
+      'Developed low-latency Java + Spring Boot APIs powering the company’s web and mobile applications.',
+      'Built an ML profile deduplicator (FastText + scikit-learn) that cut manual recruiter work from hours to ~20 seconds.',
     ],
     stack: [
       'Java',
       'Spring Boot',
-      'React',
       'Next.js',
-      'React Native',
+      'React',
       'Redux',
       'Python',
       'scikit-learn',

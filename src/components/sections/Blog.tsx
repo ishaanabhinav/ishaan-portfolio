@@ -16,14 +16,16 @@ export const Blog = () => (
       <SectionHeading
         eyebrow="Writing"
         title="Notes from production."
-        description="Lessons from shipping distributed systems — usually written after fixing the bug at 2am."
+        description="A mix of distributed-systems writeups and engineering-culture notes from the field."
       />
 
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
         {BLOG_POSTS.map((post, i) => (
           <motion.a
             key={post.slug}
             href={post.url}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
@@ -49,7 +51,7 @@ export const Blog = () => (
                 ))}
               </div>
               <div className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-300">
-                Read post
+                Read on Medium
                 <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
               </div>
             </GlassCard>

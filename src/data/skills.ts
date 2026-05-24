@@ -42,10 +42,8 @@ export const SKILLS: Skill[] = [
   { name: 'BigQuery', category: 'Databases', level: 4 },
 
   // Tools
-  { name: 'Git', category: 'Tools', level: 5 },
   { name: 'Datadog', category: 'Tools', level: 4 },
   { name: 'Grafana', category: 'Tools', level: 4 },
-  { name: 'Postman', category: 'Tools', level: 5 },
   { name: 'MQTT', category: 'Tools', level: 4 },
   { name: 'HyperLogLog', category: 'Tools', level: 4 },
 ];

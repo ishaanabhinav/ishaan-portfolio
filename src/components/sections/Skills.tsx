@@ -28,14 +28,9 @@ export const Skills = () => (
               transition={{ duration: 0.45, delay: index * 0.05 }}
             >
               <GlassCard glow className="h-full">
-                <div className="mb-4 flex items-center justify-between">
-                  <h3 className="font-display text-base font-semibold tracking-tight">
-                    {category}
-                  </h3>
-                  <span className="text-xs font-medium text-ink-500 dark:text-ink-400">
-                    {items.length}
-                  </span>
-                </div>
+                <h3 className="mb-4 font-display text-base font-semibold tracking-tight">
+                  {category}
+                </h3>
                 <ul className="flex flex-wrap gap-2">
                   {items.map((skill) => (
                     <li key={skill.name}>

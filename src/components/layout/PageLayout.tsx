@@ -10,7 +10,7 @@ interface PageLayoutProps {
 }
 
 export const PageLayout = ({ children }: PageLayoutProps) => (
-  <div className="relative isolate flex min-h-screen flex-col">
+  <div className="relative isolate flex min-h-screen flex-col overflow-x-clip">
     <AnimatedBackground />
     <ScrollProgress />
 

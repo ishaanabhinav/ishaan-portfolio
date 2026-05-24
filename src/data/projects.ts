@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     title: 'Keyword Selection (Search Ads)',
     subtitle: 'Intent-aligned campaigns for merchants',
     description:
-      'Engineered Keyword Selection for self-serve and enterprise merchants — letting businesses define keywords that trigger their ads and aligning campaigns with user search intent.',
+      'Engineered the Keyword Selection engine for self-serve and enterprise merchants, directly aligning campaign delivery with user search intent to drive a month-over-month lift in booked revenue.',
     outcomes: [
       'Low single-digit % monthly lift in self-serve booked revenue',
       'Adopted across self-serve and enterprise merchants',
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
     title: 'Ads Telemetry Reliability',
     subtitle: 'MQTT cross-verification pipeline',
     description:
-      'Engineered a parallel telemetry system using MQTT to cross-verify ad events against WebSockets, identifying dropped or delayed events that caused revenue loss.',
+      'Built a parallel MQTT cross-verification telemetry pipeline to catch dropped WebSocket events, successfully recovering lost revenue and establishing a redundant transport pattern now standard across the ads stack.',
     outcomes: [
       'Recovered a low single-digit % of revenue previously lost to missed impressions',
       'Measurable org-wide improvement in event-capture reliability',

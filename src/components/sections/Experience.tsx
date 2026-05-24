@@ -13,8 +13,8 @@ export const Experience = () => (
     <Container>
       <SectionHeading
         eyebrow="Experience"
-        title="Seven years across ad-tech and full-stack platforms."
-        description="From low-latency APIs and ML pipelines to real-time bidding systems serving thousands of requests per second."
+        title="Seven years across adtech, risk &amp; fraud, and full-stack platforms."
+        description="From low-latency APIs and ML pipelines to real-time bidding and fraud-detection systems serving thousands of requests per second."
       />
 
       <ol className="relative space-y-6 border-l border-dashed border-ink-200/80 pl-6 sm:pl-8 dark:border-white/15">

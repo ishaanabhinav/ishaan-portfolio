@@ -57,7 +57,7 @@ export const Navbar = () => {
             <span className="hidden sm:inline">{SITE.shortName}</span>
           </a>
 
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-1 lg:flex">
             {NAV_ITEMS.map((item) => {
               const isActive = active === item.id;
               return (
@@ -65,7 +65,7 @@ export const Navbar = () => {
                   <a
                     href={item.href}
                     className={cn(
-                      'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors',
+                      'relative rounded-full px-3 py-2 text-sm font-medium transition-colors xl:px-3.5',
                       isActive
                         ? 'text-ink-900 dark:text-white'
                         : 'text-ink-500 hover:text-ink-900 dark:text-ink-300 dark:hover:text-white',
@@ -86,18 +86,18 @@ export const Navbar = () => {
           </ul>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle className="hidden sm:inline-flex" />
+            <ThemeToggle className="hidden lg:inline-flex" />
             <LinkButton
               href="#contact"
               size="sm"
               variant="primary"
-              className="hidden sm:inline-flex"
+              className="hidden lg:inline-flex"
             >
               Get in touch
             </LinkButton>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-200/70 bg-white/70 text-ink-900 backdrop-blur-md md:hidden dark:border-white/10 dark:bg-white/[0.05] dark:text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-200/70 bg-white/70 text-ink-900 backdrop-blur-md lg:hidden dark:border-white/10 dark:bg-white/[0.05] dark:text-white"
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
               onClick={() => setOpen((o) => !o)}
@@ -115,7 +115,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="mt-2 md:hidden"
+            className="mt-2 lg:hidden"
           >
             <Container>
               <ul className="flex flex-col gap-1 rounded-2xl border border-ink-200/70 bg-white/85 p-3 backdrop-blur-xl dark:border-white/10 dark:bg-ink-950/80">
