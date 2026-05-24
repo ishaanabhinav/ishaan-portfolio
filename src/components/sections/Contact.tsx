@@ -14,7 +14,7 @@ export const Contact = () => (
       <SectionHeading
         eyebrow="Contact"
         title="Let's build something."
-        description="Open to staff-level / engineering-leader conversations, advisory work, and the occasional good problem to think about."
+        description="Always interested in conversations about distributed systems, adtech, and engineering teams that ship."
       />
 
       <GlassCard glow className="mx-auto max-w-2xl text-center">
