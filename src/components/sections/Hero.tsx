@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, FileDown, MapPin, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, MapPin, Sparkles } from 'lucide-react';
 
 import { Container } from '@/components/ui/Container';
 import { LinkButton } from '@/components/ui/Button';
@@ -31,7 +31,7 @@ export const Hero = () => (
           <motion.div variants={fadeUp}>
             <Badge tone="brand">
               <Sparkles className="h-3 w-3" aria-hidden />
-              Open to staff-level & engineering-leader roles
+              Distributed systems &middot; Adtech &middot; Real-time platforms
             </Badge>
           </motion.div>
 
@@ -66,15 +66,6 @@ export const Hero = () => (
             </LinkButton>
             <LinkButton href="#contact" variant="outline" size="lg">
               Let&rsquo;s talk
-            </LinkButton>
-            <LinkButton
-              href={SITE.resumeUrl}
-              external
-              variant="ghost"
-              size="lg"
-              leadingIcon={<FileDown className="h-4 w-4" />}
-            >
-              Résumé
             </LinkButton>
           </motion.div>
 
@@ -192,10 +183,10 @@ const HeroPortrait = () => {
 };
 
 const STATS = [
-  { value: '7K', label: 'requests / sec at peak', sub: 'Gojek RTB platform' },
-  { value: '<50ms', label: 'p99 latency', sub: 'critical bidding paths' },
-  { value: '8', label: 'microservices', sub: 'ads platform redesign' },
-  { value: '7+ yrs', label: 'building products', sub: 'across full stack' },
+  { value: '7+ yrs', label: 'shipping software', sub: 'startup → scale-up' },
+  { value: '7K RPS', label: 'peak throughput', sub: 'real-time ads platform' },
+  { value: '5+', label: 'production languages', sub: 'Go · Elixir · Java · Python · TS' },
+  { value: '3', label: 'core specialties', sub: 'backend · ML · full-stack' },
 ];
 
 const HeroStats = () => (
